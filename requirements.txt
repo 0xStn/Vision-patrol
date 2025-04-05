@@ -1,0 +1,10 @@
+flask
+flask-socketio
+ultralytics
+opencv-python
+numpy
+Werkzeug
+python-engineio
+python-socketio
+pillow
+torch
