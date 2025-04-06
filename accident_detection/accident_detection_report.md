@@ -31,3 +31,8 @@ The accident detection code is designed to monitor video feeds for accidents inv
 - **Initialization**: Create an instance of `AccidentDetector` with the model path and configuration settings.
 - **Processing**: Call the `process_video` method with the video file path to start detection.
 - **Output**: Generates alerts, saves snapshots, and logs accident details.
+
+## Datasets
+> https://universe.roboflow.com/deteccion-h92uo/deteccion_accidentes/dataset/2
+> https://universe.roboflow.com/accident-detection-model/accident-detection-model/dataset/2
+
