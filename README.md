@@ -2,8 +2,15 @@
 here is our graduation project about the effective management and violation traffic system  to support road management and reduce any violation or bad activity on the road with accident detection feature 
 
 
-> **suggest you to run it in virtual environment**
-> ---
+
+**Suggest you to run it in virtual environment**
+---
+
+ `python -m venv venv`
+
+ `venv\Scripts\activate`
+ 
+ `venv\Scripts\Activate.ps1`(Powershell)
 
 # Important notes  
 
