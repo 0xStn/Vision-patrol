@@ -1,0 +1,182 @@
+[
+  {
+    "date": "2025-06-19",
+    "time": "08:10:08",
+    "license_plate": "2835BSY",
+    "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "speed",
+    "violation_id": "000001_942df1",
+    "snapshot_path": "snapshots\\speed_vehicle_000001_942df1_081008.jpg",
+    "extra_info": {
+      "speed": 1.8561760699353917
+    },
+    "plate_snapshot_path": "plates\\plate_000001_942df1_recognized_20250619_081008.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "08:10:26",
+    "license_plate": "9079GCH",
+    "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "speed",
+    "violation_id": "000002_b8eefe",
+    "snapshot_path": "snapshots\\speed_vehicle_000002_b8eefe_081026.jpg",
+    "extra_info": {
+      "speed": 1.4748062190787878
+    },
+    "plate_snapshot_path": "plates\\plate_000002_b8eefe_recognized_20250619_081026.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "08:10:45",
+    "license_plate": "5553DN",
+    "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "speed",
+    "violation_id": "000004_44516e",
+    "snapshot_path": "snapshots\\speed_vehicle_000004_44516e_081045.jpg",
+    "extra_info": {
+      "speed": 2.8215956277256993
+    },
+    "plate_snapshot_path": "plates\\plate_000004_44516e_recognized_20250619_081045.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "08:10:50",
+    "license_plate": "3693FSG",
+    "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "speed",
+    "violation_id": "000005_2ad31c",
+    "snapshot_path": "snapshots\\speed_vehicle_000005_2ad31c_081050.jpg",
+    "extra_info": {
+      "speed": 1.8870048259158063
+    },
+    "plate_snapshot_path": "plates\\plate_000005_2ad31c_recognized_20250619_081050.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "08:13:30",
+    "license_plate": "0752GJR",
+    "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "speed",
+    "violation_id": "000001_1661fe",
+    "snapshot_path": "snapshots\\speed_vehicle_000001_1661fe_081330.jpg",
+    "extra_info": {
+      "speed": 1.834261305027258
+    },
+    "plate_snapshot_path": "plates\\plate_000001_1661fe_recognized_20250619_081331.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "08:13:54",
+    "license_plate": "2835BSY",
+    "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "speed",
+    "violation_id": "000002_403de2",
+    "snapshot_path": "snapshots\\speed_vehicle_000002_403de2_081354.jpg",
+    "extra_info": {
+      "speed": 1.9187613230312983
+    },
+    "plate_snapshot_path": "plates\\plate_000002_403de2_recognized_20250619_081354.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "08:14:10",
+    "license_plate": "9079GCH",
+    "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "speed",
+    "violation_id": "000003_8125fc",
+    "snapshot_path": "snapshots\\speed_vehicle_000003_8125fc_081410.jpg",
+    "extra_info": {
+      "speed": 2.041604408270854
+    },
+    "plate_snapshot_path": "plates\\plate_000003_8125fc_recognized_20250619_081410.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "08:15:29",
+    "license_plate": "aA82545",
+    "camera_id": "6909c0f1-309d-4072-bf1f-40cc6ad07d58",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "parking",
+    "violation_id": "000001_ccb83f",
+    "snapshot_path": "snapshots\\parking_vehicle_000001_ccb83f_081529.jpg",
+    "extra_info": {
+      "duration": 15
+    },
+    "plate_snapshot_path": "plates\\plate_000001_ccb83f_recognized_20250619_081530.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "09:04:42",
+    "license_plate": "KL2263022",
+    "camera_id": "2d48d855-a08e-4eef-b126-310e6f323fbe",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "wrong_direction",
+    "violation_id": "000005_6a2604",
+    "snapshot_path": "snapshots\\wrong_direction_vehicle_000005_6a2604_090442.jpg",
+    "extra_info": {
+      "line_pair": 0
+    },
+    "plate_snapshot_path": "plates\\plate_000005_6a2604_recognized_20250619_090442.jpg"
+  },
+  {
+    "date": "2025-06-19",
+    "time": "09:10:37",
+    "license_plate": "Ja82545",
+    "camera_id": "6909c0f1-309d-4072-bf1f-40cc6ad07d58",
+    "camera_location": "Unknown",
+    "location_coordinates": {
+      "lat": 0.0,
+      "lng": 0.0
+    },
+    "violation_type": "parking",
+    "violation_id": "000001_033e6d",
+    "snapshot_path": "snapshots\\parking_vehicle_000001_033e6d_091037.jpg",
+    "extra_info": {
+      "duration": 15
+    },
+    "plate_snapshot_path": "plates\\plate_000001_033e6d_recognized_20250619_091038.jpg"
+  }
+]

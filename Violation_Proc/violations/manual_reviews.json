@@ -1,0 +1,242 @@
+[
+  {
+    "review_id": "MR_01b6f088",
+    "violation_id": "000003_03bab9",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "08:10:28",
+      "license_plate": "",
+      "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "speed",
+      "violation_id": "000003_03bab9",
+      "vehicle_id": 7.0,
+      "snapshot_path": "snapshots\\speed_vehicle_000003_03bab9_081028.jpg",
+      "extra_info": {
+        "speed": 1.3872368116054912
+      },
+      "plate_snapshot_path": ""
+    },
+    "reason": "License plate detection failed - no plate found",
+    "notes": "Automatic creation: License plate detection failed - no plate found. Detection confidence: 0.00",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T08:10:28.487207",
+    "updated_at": null,
+    "status": "pending"
+  },
+  {
+    "review_id": "MR_cdf50eff",
+    "violation_id": "000004_05b84e",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "08:14:11",
+      "license_plate": "",
+      "camera_id": "72a41026-92b9-4186-94f3-420a82a77bb5",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "speed",
+      "violation_id": "000004_05b84e",
+      "vehicle_id": 9.0,
+      "snapshot_path": "snapshots\\speed_vehicle_000004_05b84e_081411.jpg",
+      "extra_info": {
+        "speed": 1.831749576772476
+      },
+      "plate_snapshot_path": ""
+    },
+    "reason": "License plate detection failed - no plate found",
+    "notes": "Automatic creation: License plate detection failed - no plate found. Detection confidence: 0.00",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T08:14:12.168845",
+    "updated_at": null,
+    "status": "pending"
+  },
+  {
+    "review_id": "MR_d8025bb8",
+    "violation_id": "000002_4afd35",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "08:15:30",
+      "license_plate": "",
+      "camera_id": "6909c0f1-309d-4072-bf1f-40cc6ad07d58",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "parking",
+      "violation_id": "000002_4afd35",
+      "vehicle_id": 2.0,
+      "snapshot_path": "snapshots\\parking_vehicle_000002_4afd35_081530.jpg",
+      "extra_info": {
+        "duration": 15
+      },
+      "plate_snapshot_path": ""
+    },
+    "reason": "License plate detection failed - no plate found",
+    "notes": "Automatic creation: License plate detection failed - no plate found. Detection confidence: 0.00",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T08:15:30.938526",
+    "updated_at": null,
+    "status": "pending"
+  },
+  {
+    "review_id": "MR_bf6682fa",
+    "violation_id": "000001_51b903",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "09:02:10",
+      "license_plate": "",
+      "camera_id": "2d48d855-a08e-4eef-b126-310e6f323fbe",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "wrong_direction",
+      "violation_id": "000001_51b903",
+      "vehicle_id": 7.0,
+      "snapshot_path": "snapshots\\wrong_direction_vehicle_000001_51b903_090210.jpg",
+      "extra_info": {
+        "line_pair": 0
+      },
+      "plate_snapshot_path": ""
+    },
+    "reason": "License plate detection failed - no plate found",
+    "notes": "Automatic creation: License plate detection failed - no plate found. Detection confidence: 0.00",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T09:02:11.515620",
+    "updated_at": null,
+    "status": "pending"
+  },
+  {
+    "review_id": "MR_6f571c00",
+    "violation_id": "000002_f48e5e",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "09:03:22",
+      "license_plate": "",
+      "camera_id": "2d48d855-a08e-4eef-b126-310e6f323fbe",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "wrong_direction",
+      "violation_id": "000002_f48e5e",
+      "vehicle_id": 27.0,
+      "snapshot_path": "snapshots\\wrong_direction_vehicle_000002_f48e5e_090322.jpg",
+      "extra_info": {
+        "line_pair": 0
+      },
+      "plate_snapshot_path": ""
+    },
+    "reason": "License plate detection failed - no plate found",
+    "notes": "Automatic creation: License plate detection failed - no plate found. Detection confidence: 0.00",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T09:03:22.608057",
+    "updated_at": null,
+    "status": "pending"
+  },
+  {
+    "review_id": "MR_fe34482c",
+    "violation_id": "000003_69eef1",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "09:03:52",
+      "license_plate": "",
+      "camera_id": "2d48d855-a08e-4eef-b126-310e6f323fbe",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "wrong_direction",
+      "violation_id": "000003_69eef1",
+      "vehicle_id": 52.0,
+      "snapshot_path": "snapshots\\wrong_direction_vehicle_000003_69eef1_090352.jpg",
+      "extra_info": {
+        "line_pair": 0
+      },
+      "plate_snapshot_path": "plates\\plate_000003_69eef1_detected_20250619_090352.jpg"
+    },
+    "reason": "License plate detected (conf: 0.71) but OCR failed to read text",
+    "notes": "Automatic creation: License plate detected (conf: 0.71) but OCR failed to read text. Detection confidence: 0.71",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T09:03:52.783744",
+    "updated_at": null,
+    "status": "pending"
+  },
+  {
+    "review_id": "MR_495b7f64",
+    "violation_id": "000004_c9974f",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "09:04:07",
+      "license_plate": "",
+      "camera_id": "2d48d855-a08e-4eef-b126-310e6f323fbe",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "wrong_direction",
+      "violation_id": "000004_c9974f",
+      "vehicle_id": 70.0,
+      "snapshot_path": "snapshots\\wrong_direction_vehicle_000004_c9974f_090407.jpg",
+      "extra_info": {
+        "line_pair": 0
+      },
+      "plate_snapshot_path": "plates\\plate_000004_c9974f_detected_20250619_090408.jpg"
+    },
+    "reason": "License plate detected (conf: 0.85) but OCR failed to read text",
+    "notes": "Automatic creation: License plate detected (conf: 0.85) but OCR failed to read text. Detection confidence: 0.85",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T09:04:08.149936",
+    "updated_at": null,
+    "status": "pending"
+  },
+  {
+    "review_id": "MR_d500ef94",
+    "violation_id": "000002_7bd604",
+    "violation_data": {
+      "date": "2025-06-19",
+      "time": "09:10:38",
+      "license_plate": "",
+      "camera_id": "6909c0f1-309d-4072-bf1f-40cc6ad07d58",
+      "camera_location": "Unknown",
+      "location_coordinates": {
+        "lat": 0.0,
+        "lng": 0.0
+      },
+      "violation_type": "parking",
+      "violation_id": "000002_7bd604",
+      "vehicle_id": 2.0,
+      "snapshot_path": "snapshots\\parking_vehicle_000002_7bd604_091038.jpg",
+      "extra_info": {
+        "duration": 15
+      },
+      "plate_snapshot_path": ""
+    },
+    "reason": "License plate detection failed - no plate found",
+    "notes": "Automatic creation: License plate detection failed - no plate found. Detection confidence: 0.00",
+    "license_plate": null,
+    "reviewer_name": null,
+    "created_at": "2025-06-19T09:10:38.783011",
+    "updated_at": null,
+    "status": "pending"
+  }
+]

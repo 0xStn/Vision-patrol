@@ -1,0 +1,52 @@
+{
+  "DETECTION": [
+    {
+      "points": [
+        [
+          1696,
+          280
+        ],
+        [
+          123,
+          353
+        ],
+        [
+          53,
+          700
+        ],
+        [
+          1895,
+          726
+        ],
+        [
+          1701,
+          286
+        ],
+        [
+          1696,
+          280
+        ]
+      ],
+      "type": "DETECTION",
+      "enabled": true,
+      "properties": {}
+    }
+  ],
+  "SPEED": [
+    {
+      "points": [
+        [
+          107,
+          480
+        ],
+        [
+          1755,
+          398
+        ]
+      ],
+      "type": "SPEED",
+      "enabled": true,
+      "properties": {}
+    }
+  ]
+}

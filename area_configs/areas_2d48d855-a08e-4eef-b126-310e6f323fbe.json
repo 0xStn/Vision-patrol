@@ -1,0 +1,63 @@
+{
+  "WRONG_DIRECTION": [
+    {
+      "points": [
+        [
+          16,
+          518
+        ],
+        [
+          1804,
+          278
+        ]
+      ],
+      "type": "WRONG_DIRECTION",
+      "enabled": true,
+      "properties": {}
+    },
+    {
+      "points": [
+        [
+          1435,
+          155
+        ],
+        [
+          13,
+          318
+        ]
+      ],
+      "type": "WRONG_DIRECTION",
+      "enabled": true,
+      "properties": {}
+    }
+  ],
+  "DETECTION": [
+    {
+      "points": [
+        [
+          1383,
+          130
+        ],
+        [
+          0,
+          256
+        ],
+        [
+          18,
+          632
+        ],
+        [
+          1906,
+          304
+        ],
+        [
+          1383,
+          130
+        ]
+      ],
+      "type": "DETECTION",
+      "enabled": true,
+      "properties": {}
+    }
+  ]
+}

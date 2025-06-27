@@ -1,0 +1,397 @@
+# Vision Patrol - .gitignore
+# Generated for AI Traffic Monitoring System
+
+# ==================== PYTHON ====================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ==================== AI/ML MODELS ====================
+# Large model files (keep structure, ignore weights)
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.bin
+*.weights
+*.tflite
+
+# Exclude specific model files but keep the base YOLOv8 model
+!yolov8s.pt
+
+# Model checkpoints and training artifacts
+checkpoints/
+runs/
+logs/
+tensorboard_logs/
+wandb/
+mlruns/
+
+# Dataset files
+datasets/
+data/
+*.dataset
+
+# ==================== VIDEO FILES ====================
+# Large video files for testing (keep structure, ignore content)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flv
+*.webm
+*.m4v
+*.3gp
+*.mpg
+*.mpeg
+
+# Keep specific test videos if needed (uncomment if you want to include some)
+# !Testing\ Vids/sample_video.mp4
+
+# Video processing temp files
+temp_frames/
+*.tmp
+
+# ==================== OUTPUT FILES ====================
+# Generated snapshots and evidence
+snapshots/*.jpg
+snapshots/*.png
+snapshots/*.jpeg
+violations/*.jpg
+violations/*.png
+violations/*.jpeg
+accident_alerts/*.jpg
+accident_alerts/*.png
+accident_alerts/*.jpeg
+
+# Keep directories but ignore contents
+snapshots/*
+!snapshots/.gitkeep
+violations/*
+!violations/.gitkeep
+accident_alerts/*
+!accident_alerts/.gitkeep
+
+# CSV reports and logs
+*.csv
+reports/
+output/
+
+# ==================== CONFIGURATION ====================
+# Sensitive configuration files
+config.ini
+.env.local
+.env.production
+secrets.json
+credentials.json
+
+# User-specific configurations
+user_configs/
+local_configs/
+
+# Area configurations (optional - uncomment if you want to ignore)
+# area_configs/*.json
+
+# ==================== SYSTEM FILES ====================
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.lnk
+desktop.ini
+
+# Linux
+*~
+
+# ==================== IDE/EDITOR ====================
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# PyCharm
+.idea/
+*.swp
+*.swo
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==================== RUNTIME/TEMP ====================
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Process files
+*.pid
+*.lock
+
+# Cache directories
+.cache/
+cache/
+
+# ==================== DOCUMENTATION ====================
+# Generated documentation
+docs/build/
+docs/_build/
+site/
+
+# ==================== DEPLOYMENT ====================
+# Docker
+.dockerignore
+
+# Kubernetes
+*.yaml
+*.yml
+!docker-compose.yml
+!requirements.txt
+
+# Cloud deployment
+.aws/
+.gcp/
+.azure/
+
+# ==================== TESTING ====================
+# Test outputs
+test_results/
+test_outputs/
+*.test
+
+# Performance testing
+*.prof
+*.profile
+
+# ==================== CUSTOM VISION PATROL ====================
+# Upload directories (user uploaded videos)
+uploads/*.mp4
+uploads/*.avi
+uploads/*.mov
+uploads/*.mkv
+
+# Keep upload directory structure
+uploads/*
+!uploads/.gitkeep
+
+# Processing logs
+processing_logs/
+violation_logs/
+
+# Backup files
+*.bak
+*.backup
+backup/
+
+# Performance monitoring
+performance_logs/
+metrics/
+
+# User sessions
+sessions/
+
+# API keys and tokens
+api_keys.txt
+tokens.json
+
+# ==================== LARGE FILES ====================
+# Any file larger than 100MB (GitHub limit)
+# Note: This is handled by Git LFS if configured
+
+# Compressed archives
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+
+# Keep specific archives if needed
+!Testing\ Vids.zip
+
+# ==================== DEVELOPMENT ====================
+# Development utilities
+dev_tools/
+scripts/dev/
+.dev/
+
+# Local testing
+local_test/
+sandbox/
+
+# Experimental features
+experimental/
+prototype/
+
+# Debug files
+debug/
+*.debug
+
+# ==================== END ====================

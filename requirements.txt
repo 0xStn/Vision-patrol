@@ -1,0 +1,82 @@
+# Vision Patrol - AI Traffic Monitoring System Requirements
+
+# ==================== CORE AI/ML LIBRARIES ====================
+# Computer Vision and Object Detection
+ultralytics>=8.0.0
+opencv-python>=4.5.0
+numpy>=1.20.0
+torch>=1.7.0
+torchvision>=0.8.0
+pillow>=8.0.0
+
+# OCR for License Plate Recognition
+easyocr>=1.6.0
+
+# Data Processing
+pandas>=1.3.0
+
+# Computer Vision Utilities
+cvzone>=1.5.6
+
+# ==================== VIDEO PROCESSING ====================
+# Video input/output handling
+vidgear[core]>=0.2.6
+
+# YouTube video handling
+pytube>=15.0.0
+yt-dlp>=2023.3.4
+youtube-dl>=2021.12.17
+
+# ==================== WEB API & COMMUNICATION ====================
+# FastAPI and Web Server
+fastapi==0.103.1
+uvicorn[standard]==0.23.2
+python-multipart==0.0.6
+websockets==11.0.3
+pydantic>=2.0.0
+
+# CORS and Security
+python-jose[cryptography]==3.3.0
+python-dotenv==1.0.0
+
+# HTTP requests for URL validation and API calls
+requests>=2.28.0
+
+# ==================== SYSTEM & UTILITIES ====================
+# Configuration and Environment
+python-dotenv>=1.0.0
+configparser>=5.0.0
+
+# Logging and System utilities
+logging>=0.4.9.6
+
+# Path handling (already in Python 3.4+)
+pathlib2>=2.3.0; python_version < "3.4"
+
+# ==================== TESTING & DEVELOPMENT ====================
+# Testing frameworks
+pytest==7.4.0
+pytest-asyncio>=0.21.0
+httpx==0.24.1
+
+# Development utilities
+black>=23.0.0
+flake8>=6.0.0
+
+# ==================== OPTIONAL PERFORMANCE ====================
+# GPU acceleration (optional)
+# Uncomment if using CUDA
+# torch-audio>=0.8.0
+# torchaudio>=0.8.0
+
+# Performance monitoring
+psutil>=5.9.0
+
+# ==================== PLATFORM SPECIFIC ====================
+# Windows specific (automatically installed on Windows)
+# pywin32>=306; sys_platform == "win32"
+
+# ==================== VERSION CONSTRAINTS ====================
+# Ensure compatibility
+setuptools>=65.0.0
+wheel>=0.37.0

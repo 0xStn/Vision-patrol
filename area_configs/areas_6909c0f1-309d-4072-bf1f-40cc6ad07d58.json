@@ -1,0 +1,61 @@
+{
+  "WRONG_DIRECTION": [],
+  "DETECTION": [
+    {
+      "points": [
+        [
+          1273,
+          221
+        ],
+        [
+          501,
+          212
+        ],
+        [
+          80,
+          581
+        ],
+        [
+          1264,
+          592
+        ],
+        [
+          1273,
+          221
+        ]
+      ],
+      "type": "DETECTION",
+      "enabled": true,
+      "properties": {}
+    }
+  ],
+  "PARKING": [
+    {
+      "points": [
+        [
+          660,
+          256
+        ],
+        [
+          424,
+          500
+        ],
+        [
+          216,
+          493
+        ],
+        [
+          498,
+          223
+        ],
+        [
+          660,
+          256
+        ]
+      ],
+      "type": "PARKING",
+      "enabled": true,
+      "properties": {}
+    }
+  ]
+}

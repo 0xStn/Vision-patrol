@@ -1,0 +1,40 @@
+/* Adds custom styles to fix the canvas sizing issue */
+/* This file should be included after canvas-styles.css */
+
+/* Force the canvas container to respect the aspect ratio */
+.canvas-container {
+    aspect-ratio: 16 / 9;
+    height: auto !important; 
+    min-height: 450px !important;
+    position: relative;
+    overflow: hidden;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+@media (min-width: 992px) {
+    .canvas-container {
+        min-height: 600px !important;
+    }
+}
+
+/* Force fabric.js canvases to fill the container and match dimensions */
+.canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+/* Fix for any inline styles that might interfere */
+#videoCanvas, 
+.upper-canvas, 
+.lower-canvas {
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}

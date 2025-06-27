@@ -1,0 +1,49 @@
+{
+  "WRONG_DIRECTION": [],
+  "DETECTION": [
+    {
+      "points": [
+        [
+          1666,
+          149
+        ],
+        [
+          178,
+          187
+        ],
+        [
+          33,
+          627
+        ],
+        [
+          1861,
+          581
+        ],
+        [
+          1666,
+          149
+        ]
+      ],
+      "type": "DETECTION",
+      "enabled": true,
+      "properties": {}
+    }
+  ],
+  "SPEED": [
+    {
+      "points": [
+        [
+          118,
+          375
+        ],
+        [
+          1761,
+          367
+        ]
+      ],
+      "type": "SPEED",
+      "enabled": true,
+      "properties": {}
+    }
+  ]
+}

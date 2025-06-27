@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Sources | Vision Patrol</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Camera Lens Grid Background Animation */
+        .camera-lens-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(89, 195, 249, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(89, 195, 249, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 40% 60%, rgba(89, 195, 249, 0.03) 0%, transparent 20%);
+            background-size: 200px 200px;
+            animation: gridPulse 20s infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes gridPulse {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.7; }
+        }
+
+        /* Floating Camera Lenses */
+        .camera-lens {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(89, 195, 249, 0.1) 0%, transparent 70%);
+            border: 1px solid rgba(89, 195, 249, 0.2);
+            box-shadow: 0 0 30px rgba(89, 195, 249, 0.1);
+            animation: floatLens 25s infinite linear;
+            z-index: 0;
+        }
+
+        @keyframes floatLens {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+            25% { transform: translate(50px, 50px) rotate(90deg); opacity: 0.5; }
+            50% { transform: translate(100px, 0) rotate(180deg); opacity: 0.3; }
+            75% { transform: translate(50px, -50px) rotate(270deg); opacity: 0.5; }
+            100% { transform: translate(0, 0) rotate(360deg); opacity: 0.3; }
+        }
+
+        /* Camera Iris Animation */
+        .camera-iris {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(89, 195, 249, 0.2) 0%, transparent 70%);
+            animation: irisPulse 8s infinite alternate;
+            z-index: 1;
+        }
+
+        @keyframes irisPulse {
+            0% { transform: scale(1); opacity: 0.2; }
+            100% { transform: scale(1.5); opacity: 0.4; }
+        }
+
+        /* Main Container */
+        .container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            z-index: 10;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(89, 195, 249, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #e0e0e0;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(89, 195, 249, 0.3);
+        }
+
+        .header p {
+            color: #9e9e9e;
+            margin-top: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #9e9e9e;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #59C3F9;
+            background: rgba(89, 195, 249, 0.1);
+        }
+
+        .add-source-btn {
+            background: #59C3F9;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .add-source-btn:hover {
+            background: #7FD1FF;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(89, 195, 249, 0.3);
+        }
+
+        /* Sources List */
+        .sources-list {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(89, 195, 249, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .list-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .list-header h2 {
+            font-size: 1.3rem;
+            color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .list-header h2 i {
+            color: #59C3F9;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(50, 50, 50, 0.5);
+            border-radius: 5px;
+            padding: 8px 15px;
+            border: 1px solid rgba(89, 195, 249, 0.3);
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: #e0e0e0;
+            padding: 5px;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-box i {
+            color: #9e9e9e;
+            margin-right: 8px;
+        }
+
+        .sources-table-container {
+            overflow-x: auto;
+        }
+
+        .loading-text {
+            text-align: center;
+            color: #9e9e9e;
+            font-style: italic;
+            padding: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(89, 195, 249, 0.1);
+        }
+
+        th {
+            color: #59C3F9;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            background: rgba(89, 195, 249, 0.05);
+        }
+
+        td {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        tr:hover {
+            background: rgba(89, 195, 249, 0.05);
+        }
+
+        .source-status {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: statusPulse 2s infinite;
+            display: inline-block;
+        }
+
+        .status-running {
+            background: #4CAF50;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+
+        .status-stopped {
+            background: #f44336;
+            box-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+        }
+
+        .status-error {
+            background: #ff9800;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+        }
+
+        @keyframes statusPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .status-text {
+            margin-left: 10px;
+            font-weight: 500;
+        }
+
+        .status-text.running {
+            color: #4CAF50;
+        }
+
+        .status-text.stopped {
+            color: #f44336;
+        }
+
+        .status-text.error {
+            color: #ff9800;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-primary {
+            background: #59C3F9;
+            color: #121212;
+        }
+
+        .btn-primary:hover {
+            background: #7FD1FF;
+            transform: translateY(-1px);
+        }
+
+        .btn-success {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #66BB6A;
+            transform: translateY(-1px);
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #EF5350;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: rgba(89, 195, 249, 0.1);
+            color: #e0e0e0;
+            border: 1px solid rgba(89, 195, 249, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(89, 195, 249, 0.2);
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 10px;
+            padding: 0;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid rgba(89, 195, 249, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(89, 195, 249, 0.2);
+        }
+
+        .modal-header h3 {
+            color: #e0e0e0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-header h3 i {
+            color: #59C3F9;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: #9e9e9e;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: #59C3F9;
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #9e9e9e;
+            font-size: 0.9rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(50, 50, 50, 0.5);
+            border: 1px solid rgba(89, 195, 249, 0.3);
+            border-radius: 5px;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #59C3F9;
+            box-shadow: 0 0 0 2px rgba(89, 195, 249, 0.2);
+        }
+
+        .input-group small {
+            color: #9e9e9e;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #59C3F9;
+        }
+
+        .checkbox-group label {
+            color: #e0e0e0;
+            cursor: pointer;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .list-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sources-table-container {
+                overflow-x: auto;
+            }
+
+            table {
+                min-width: 800px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .btn {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="camera-lens-grid"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h1>Video Sources</h1>
+                <p>Manage video sources for the traffic monitoring system</p>
+            </div>
+            <div class="nav-links">
+                <a href="sources.html" class="nav-link active">Video Sources</a>
+                <a href="config.html" class="nav-link">Configuration</a>
+                <button class="add-source-btn" onclick="openAddSourceModal()">
+                    <i class="fas fa-plus"></i> Add Source
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Video Sources List -->
+        <div class="sources-list">
+            <div class="list-header">
+                <h2>
+                    <i class="fas fa-video"></i>
+                    Video Sources
+                </h2>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search sources..." id="searchSources">
+                </div>
+            </div>
+
+            <div class="sources-table-container">
+                <div id="videoSourcesList">
+                    <p class="loading-text">Loading video sources...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Source Modal -->
+    <div class="modal-overlay" id="addSourceModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-plus"></i>
+                    Add Video Source
+                </h3>
+                <button class="close-modal" onclick="closeAddSourceModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addSourceForm">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="sourceName">Source Name</label>
+                            <input type="text" id="sourceName" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sourceUrl">Source URL/Path</label>
+                            <input type="text" id="sourceUrl" required>
+                            <small>Local file path or stream URL (RTSP/HTTP)</small>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sourceLocation">Location</label>
+                            <input type="text" id="sourceLocation" value="Unknown">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="speedLimit">Speed Limit (km/h)</label>
+                            <input type="number" id="speedLimit" value="60.0" step="0.1">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sourceLat">Latitude</label>
+                            <input type="number" id="sourceLat" value="0.0" step="0.000001">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="sourceLng">Longitude</label>
+                            <input type="number" id="sourceLng" value="0.0" step="0.000001">
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="useStream">
+                        <label for="useStream">Is Live Stream</label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeAddSourceModal()">
+                            <i class="fas fa-times"></i> Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Add Source
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Camera Lenses -->
+    <script>
+        // Create floating camera lenses
+        function createCameraLenses() {
+            const positions = [
+                { left: '10%', top: '20%' },
+                { left: '80%', top: '70%' },
+                { left: '30%', top: '50%' },
+                { left: '70%', top: '20%' },
+                { left: '20%', top: '70%' }
+            ];
+
+            positions.forEach(pos => {
+                const lens = document.createElement('div');
+                lens.className = 'camera-lens';
+                lens.style.left = pos.left;
+                lens.style.top = pos.top;
+
+                // Random animation duration
+                const duration = Math.random() * 20 + 20;
+                lens.style.animationDuration = duration + 's';
+
+                // Random delay
+                lens.style.animationDelay = Math.random() * 5 + 's';
+
+                document.body.appendChild(lens);
+
+                // Add iris effect inside some lenses
+                if (Math.random() > 0.5) {
+                    const iris = document.createElement('div');
+                    iris.className = 'camera-iris';
+                    iris.style.left = '35px';
+                    iris.style.top = '35px';
+
+                    // Random animation duration
+                    const irisDuration = Math.random() * 5 + 5;
+                    iris.style.animationDuration = irisDuration + 's';
+
+                    lens.appendChild(iris);
+                }
+            });
+        }
+
+        // Initialize animations when page loads
+        window.addEventListener('load', createCameraLenses);
+    </script>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Modal functions
+        function openAddSourceModal() {
+            document.getElementById('addSourceModal').classList.add('active');
+        }
+
+        function closeAddSourceModal() {
+            document.getElementById('addSourceModal').classList.remove('active');
+            document.getElementById('addSourceForm').reset();
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('addSourceModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeAddSourceModal();
+            }
+        });
+
+        // Search functionality
+        function setupSearch() {
+            const searchInput = document.getElementById('searchSources');
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                const tableRows = document.querySelectorAll('tbody tr');
+
+                tableRows.forEach(row => {
+                    const rowText = row.textContent.toLowerCase();
+
+                    if (rowText.includes(searchTerm)) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize sources page
+            fetchVideoSources();
+            setupAddSourceForm();
+            setupSearch();
+        });
+
+        function setupAddSourceForm() {
+            const form = document.getElementById('addSourceForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const newSource = {
+                    name: document.getElementById('sourceName').value,
+                    source: document.getElementById('sourceUrl').value,
+                    use_stream: document.getElementById('useStream').checked,
+                    location: document.getElementById('sourceLocation').value,
+                    coordinates: {
+                        lat: parseFloat(document.getElementById('sourceLat').value),
+                        lng: parseFloat(document.getElementById('sourceLng').value)
+                    },
+                    speed_limit: parseFloat(document.getElementById('speedLimit').value)
+                };
+
+                addVideoSource(newSource);
+            });
+        }
+    </script>
+</body>
+</html>
