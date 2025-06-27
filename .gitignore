@@ -140,6 +140,344 @@ dmypy.json
 cython_debug/
 
 # ==================== AI/ML MODELS ====================
+# ALL model files (including custom trained models)
+*.pt
+*.pth
+*.onnx
+*.pb
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.bin
+*.weights
+*.tflite
+
+# Model checkpoints and training artifacts
+checkpoints/
+runs/
+logs/
+tensorboard_logs/
+wandb/
+mlruns/
+
+# Dataset files
+datasets/
+data/
+*.dataset
+
+# ==================== VIDEO FILES ====================
+# ALL video files for testing
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flv
+*.webm
+*.m4v
+*.3gp
+*.mpg
+*.mpeg
+*.asf
+*.rm
+*.rmvb
+
+# Video processing temp files
+temp_frames/
+*.tmp
+
+# ==================== IMAGE FILES ====================
+# Generated snapshots and evidence images
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.ico
+
+# But keep static web assets (if any)
+!static/**/*.jpg
+!static/**/*.jpeg
+!static/**/*.png
+!static/**/*.gif
+
+# ==================== OUTPUT DIRECTORIES ====================
+# Generated snapshots and evidence
+snapshots/
+violations/
+accident_alerts/
+uploads/
+plates/
+
+# Keep directory structure but ignore contents
+!snapshots/.gitkeep
+!violations/.gitkeep
+!accident_alerts/.gitkeep
+!uploads/.gitkeep
+!plates/.gitkeep
+
+# CSV reports and logs
+*.csv
+reports/
+output/
+
+# ==================== CONFIGURATION ====================
+# Sensitive configuration files
+config.ini
+.env.local
+.env.production
+secrets.json
+credentials.json
+
+# User-specific configurations
+user_configs/
+local_configs/
+
+# ==================== SYSTEM FILES ====================
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.lnk
+desktop.ini
+
+# Linux
+*~
+
+# ==================== IDE/EDITOR ====================
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# PyCharm
+.idea/
+*.swp
+*.swo
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==================== RUNTIME/TEMP ====================
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Process files
+*.pid
+*.lock
+
+# Cache directories
+.cache/
+cache/
+
+# ==================== DOCUMENTATION ====================
+# Generated documentation
+docs/build/
+docs/_build/
+site/
+
+# ==================== DEPLOYMENT ====================
+# Docker
+.dockerignore
+
+# Kubernetes
+*.yaml
+*.yml
+!docker-compose.yml
+!requirements.txt
+
+# Cloud deployment
+.aws/
+.gcp/
+.azure/
+
+# ==================== TESTING ====================
+# Test outputs
+test_results/
+test_outputs/
+*.test
+
+# Performance testing
+*.prof
+*.profile
+
+# ==================== DEVELOPMENT ====================
+# Development utilities
+dev_tools/
+scripts/dev/
+.dev/
+
+# Local testing
+local_test/
+sandbox/
+
+# Experimental features
+experimental/
+prototype/
+
+# Debug files
+debug/
+*.debug
+
+# ==================== LARGE FILES ====================
+# Compressed archives
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.tar.bz2
+
+# Backup files
+*.bak
+*.backup
+backup/
+
+# Performance monitoring
+performance_logs/
+metrics/
+
+# User sessions
+sessions/
+
+# API keys and tokens
+api_keys.txt
+tokens.json
+
+# ==================== GIT ====================
+# Git files
+.git/
+.gitattributes
+
+# ==================== END ====================
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ==================== AI/ML MODELS ====================
 # Large model files (keep structure, ignore weights)
 *.pt
 *.pth
